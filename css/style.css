@@ -1,0 +1,547 @@
+/* ===========================================================
+   AEON Lab — Design tokens (v3, dark editorial)
+   Dark, image-driven palette for a modern research website.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --paper:#090B0C;
+  --paper-line:#24292A;
+  --panel:#111617;
+  --panel-line:#2D3435;
+  --ink:#F4F1E8;
+  --ink-soft:#AEB7B3;
+  --rust:#E27645;
+  --rust-deep:#FF9A67;
+  --gold:#E6C66A;
+  --max:1080px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans', sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+
+h1,h2,h3,h4{
+  font-family:'EB Garamond', serif;
+  font-weight:500;
+  line-height:1.18;
+  color:var(--ink);
+  margin:0 0 .5em;
+  letter-spacing:.1px;
+}
+h1{font-size:clamp(2.4rem,5vw,3.6rem); font-weight:500;}
+h2{font-size:clamp(1.7rem,3vw,2.2rem);}
+h3{font-size:1.25rem;}
+p{margin:0 0 1.15em; color:var(--ink);}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+
+/* --- eyebrow / specimen-label device --------------------- */
+.label-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.72rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--rust);
+  display:inline-flex;
+  gap:.6em;
+  align-items:center;
+  margin-bottom:.9em;
+}
+.label-tag::before{
+  content:"";
+  width:20px; height:1px;
+  background:var(--rust);
+  display:inline-block;
+}
+
+/* --- specimen card: the signature element ------------------ */
+.specimen-card{
+  background:var(--panel);
+  color:var(--ink);
+  border:1px solid var(--panel-line);
+  padding:32px 34px;
+}
+.specimen-row{
+  display:flex; flex-wrap:wrap; gap:6px 26px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.72rem; letter-spacing:.02em;
+  color:var(--ink-soft);
+  border-top:1px solid var(--panel-line);
+  margin-top:18px; padding-top:14px;
+  text-transform:uppercase;
+}
+.specimen-row span b{color:var(--ink); font-weight:500;}
+
+/* --- nav -------------------------------------------------- */
+header.site{
+  position:sticky; top:0; z-index:40;
+  background:rgba(9,11,12,.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--paper-line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 0;
+}
+.brand{
+  font-family:'EB Garamond', serif;
+  font-size:1.2rem;
+  text-decoration:none;
+  color:var(--ink);
+  display:flex; flex-direction:column; line-height:1.1;
+}
+.brand small{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.6rem; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--gold); margin-top:4px;
+}
+.navlinks{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+.navlinks a{
+  font-size:.85rem; text-decoration:none; color:var(--ink-soft);
+  letter-spacing:.01em;
+  padding-bottom:3px; border-bottom:1px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.navlinks a:hover, .navlinks a.active{color:var(--rust); border-color:var(--rust);}
+.navtoggle{display:none; background:none; border:0; color:var(--ink); font-size:1.4rem;}
+
+@media (max-width:760px){
+  .navlinks{
+    position:fixed; inset:66px 0 auto 0; background:rgba(9,11,12,.98);
+    flex-direction:column; gap:0; padding:6px 32px 20px;
+    border-bottom:1px solid var(--paper-line);
+    transform:translateY(-130%); transition:transform .25s ease;
+  }
+  .navlinks.open{transform:translateY(0);}
+  .navlinks a{display:block; padding:13px 0; border-bottom:1px solid var(--paper-line);}
+  .navtoggle{display:block;}
+}
+
+/* --- footer ------------------------------------------------ */
+footer.site{
+  background:#070809;
+  border-top:1px solid var(--paper-line);
+  padding:50px 0 64px;
+  margin-top:110px;
+  color:var(--ink-soft);
+  font-size:.87rem;
+}
+footer.site a{color:var(--rust); text-decoration:none;}
+footer.site a:hover{text-decoration:underline;}
+.foot-grid{display:flex; flex-wrap:wrap; gap:44px; justify-content:space-between;}
+
+/* --- buttons ------------------------------------------------ */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.76rem; letter-spacing:.05em; text-transform:uppercase;
+  padding:13px 22px;
+  border:1px solid var(--ink);
+  color:var(--ink); text-decoration:none;
+  transition:background .15s, color .15s, border-color .15s;
+}
+.btn:hover{background:var(--ink); color:var(--paper);}
+.btn.solid{background:var(--rust); border-color:var(--rust); color:var(--paper);}
+.btn.solid:hover{background:var(--rust-deep); border-color:var(--rust-deep);}
+
+/* --- sections ------------------------------------------------ */
+section{padding:80px 0;}
+.section-tight{padding:60px 0;}
+.grid-2{display:grid; grid-template-columns:1.15fr .85fr; gap:64px;}
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+@media (max-width:860px){
+  .grid-2{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr;}
+}
+
+.divider{height:1px; background:var(--paper-line); margin:0 0 44px;}
+
+.muted{color:var(--ink-soft);}
+
+/* --- hero ------------------------------------------------ */
+.hero{padding:70px 0 20px;}
+.hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:60px; align-items:center;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.hero h1{margin-bottom:.35em;}
+.hero .lede{font-size:1.1rem; color:var(--ink-soft); max-width:48ch;}
+
+/* field-note panel replacing the old illustration */
+.field-panel{
+  background:var(--panel);
+  border:1px solid var(--panel-line);
+  padding:0;
+  overflow:hidden;
+}
+.field-panel .band{
+  height:64px;
+  background:repeating-linear-gradient(
+    90deg,
+    var(--rust) 0px, var(--rust) 3px,
+    transparent 3px, transparent 34px
+  );
+  opacity:.85;
+  border-bottom:1px solid var(--panel-line);
+}
+.field-panel .body{padding:26px 28px 22px;}
+.field-panel h3{font-size:1.05rem; margin-bottom:.5em;}
+.field-panel dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:8px 16px; font-size:.86rem;}
+.field-panel dt{
+  font-family:'IBM Plex Mono', monospace; font-size:.68rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--gold); align-self:baseline;
+}
+.field-panel dd{margin:0; color:var(--ink-soft);}
+
+/* --- research cards ------------------------------------------------ */
+.research-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+  border:1px solid var(--paper-line);
+  padding:28px 26px;
+  height:100%;
+}
+.research-card h3{margin-bottom:.4em;}
+.research-card .tag{
+  font-family:'IBM Plex Mono', monospace; font-size:.66rem;
+  color:var(--gold); text-transform:uppercase; letter-spacing:.1em;
+  display:block; margin-bottom:12px;
+}
+
+/* --- publications ------------------------------------------------ */
+.pub{
+  border-bottom:1px solid var(--paper-line);
+  padding:24px 0;
+  display:grid; grid-template-columns:80px 1fr; gap:22px;
+}
+.pub:first-child{padding-top:0;}
+.pub .year{
+  font-family:'IBM Plex Mono', monospace; font-size:.85rem;
+  color:var(--gold); padding-top:3px;
+}
+.pub h3{font-size:1.12rem; margin-bottom:.25em;}
+.pub .authors{font-size:.87rem; color:var(--ink-soft); margin-bottom:.2em;}
+.pub .venue{font-size:.85rem; font-style:italic; color:var(--ink-soft);}
+.pub a.doi{font-family:'IBM Plex Mono', monospace; font-size:.74rem; color:var(--rust); text-decoration:none;}
+.pub a.doi:hover{text-decoration:underline;}
+@media (max-width:600px){.pub{grid-template-columns:1fr; gap:4px;}}
+
+/* --- people ------------------------------------------------ */
+.person{display:grid; grid-template-columns:210px 1fr; gap:40px; align-items:start;}
+@media (max-width:700px){.person{grid-template-columns:1fr;}}
+.person-plate{
+  background:var(--panel); border:1px solid var(--panel-line);
+  aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;
+}
+.monogram{
+  font-family:'EB Garamond', serif; font-size:3.4rem; color:var(--rust);
+}
+
+/* --- contact block ------------------------------------------------ */
+.contact-block{
+  background:var(--panel); border:1px solid var(--panel-line);
+  padding:36px;
+}
+
+/* --- photo hero (homepage, shmontgomery-style) ------------------------------------------------ */
+.photo-hero{
+  position:relative;
+  min-height:82vh;
+  display:flex;
+  align-items:flex-end;
+  background:
+    linear-gradient(180deg, rgba(29,42,32,.15) 0%, rgba(20,28,22,.72) 78%, rgba(15,20,16,.88) 100%),
+    var(--panel);
+  background-size:cover;
+  background-position:center;
+  color:#F5F1E4;
+  border-bottom:1px solid var(--paper-line);
+}
+/* Swap this rule's background-image for a real photo — see README */
+.photo-hero.no-photo{
+  background:
+    linear-gradient(180deg, rgba(29,42,32,.05) 0%, rgba(20,28,22,.75) 82%, rgba(15,20,16,.9) 100%),
+    repeating-linear-gradient(135deg, #24352A 0px, #24352A 2px, #1B281F 2px, #1B281F 44px);
+}
+.photo-hero .hero-inner{
+  width:100%;
+  padding:60px 0 46px;
+}
+.photo-hero .hero-note{
+  border:1px dashed rgba(245,241,228,.35);
+  display:inline-block;
+  padding:4px 10px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.66rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(245,241,228,.7);
+  margin-bottom:22px;
+}
+.photo-hero h1{
+  color:#FBF9F1;
+  font-size:clamp(2.2rem,4.6vw,3.6rem);
+  max-width:16ch;
+  margin-bottom:.3em;
+}
+.photo-hero .tagline{
+  font-family:'DM Sans', sans-serif;
+  font-size:1.05rem;
+  color:rgba(245,241,228,.85);
+  max-width:42ch;
+  margin-bottom:24px;
+}
+.photo-hero .meta-lines{
+  font-size:.92rem;
+  color:rgba(245,241,228,.7);
+  line-height:1.8;
+  margin-bottom:26px;
+}
+.photo-hero .meta-lines a{color:#E9C77E; text-decoration:none;}
+.photo-hero .meta-lines a:hover{text-decoration:underline;}
+.photo-hero .btn{border-color:#E9C77E; color:#E9C77E;}
+.photo-hero .btn:hover{background:#E9C77E; color:#1D2A20;}
+
+/* transparent nav variant sitting over the photo */
+header.site.on-photo{
+  background:transparent;
+  border-bottom:1px solid rgba(245,241,228,.15);
+  position:absolute; top:0; left:0; right:0;
+}
+header.site.on-photo .brand,
+header.site.on-photo .navlinks a{color:#F5F1E4;}
+header.site.on-photo .brand small{color:#E9C77E;}
+header.site.on-photo .navlinks a:hover,
+header.site.on-photo .navlinks a.active{color:#E9C77E; border-color:#E9C77E;}
+header.site.on-photo .navtoggle{color:#F5F1E4;}
+
+/* thumbnail strip beneath the hero */
+.thumb-strip{padding:52px 0 60px;}
+.thumb-row{display:flex; gap:18px; flex-wrap:wrap;}
+.thumb{
+  flex:1 1 190px;
+  background:var(--panel);
+  border:1px solid var(--panel-line);
+}
+.thumb .frame{
+  aspect-ratio:1/1;
+  display:flex; align-items:center; justify-content:center;
+  border-bottom:1px solid var(--panel-line);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.62rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink-soft); text-align:center; padding:10px;
+}
+.thumb .cap{padding:12px 14px; font-size:.82rem; color:var(--ink-soft);}
+.thumb .cap b{color:var(--ink); font-weight:500; display:block; font-family:'EB Garamond', serif; font-size:1rem; margin-bottom:2px;}
+@media (max-width:700px){.thumb{flex:1 1 42%;}}
+.kicker-list{list-style:none; margin:0; padding:0;}
+.kicker-list li{
+  padding:16px 0; border-top:1px solid var(--paper-line);
+  display:flex; gap:18px; justify-content:space-between; align-items:baseline;
+  flex-wrap:wrap;
+}
+.kicker-list li:last-child{border-bottom:1px solid var(--paper-line);}
+
+/* ===========================================================
+   AEON Lab homepage hero implementation
+   Uses img/hero.jpeg and places the text on the right side of
+   the butterfly photograph.
+   =========================================================== */
+
+.photo-hero.butterfly-hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  color: #F5F1E4;
+  border-bottom: 1px solid var(--paper-line);
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.25) 42%,
+      rgba(0, 0, 0, 0.84) 100%
+    ),
+    url("../img/hero.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.photo-hero.butterfly-hero .hero-inner {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.photo-hero.butterfly-hero h1,
+.photo-hero.butterfly-hero .tagline,
+.photo-hero.butterfly-hero .meta-lines,
+.photo-hero.butterfly-hero .hero-actions {
+  width: min(100%, 540px);
+}
+
+.photo-hero.butterfly-hero h1 {
+  color: #FBF9F1;
+  font-size: clamp(2.8rem, 6.3vw, 5.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+  max-width: 10ch;
+  margin-bottom: 0.28em;
+}
+
+.photo-hero.butterfly-hero .tagline {
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.45;
+  color: rgba(245, 241, 228, 0.9);
+  max-width: 38ch;
+}
+
+.photo-hero.butterfly-hero .meta-lines {
+  color: rgba(245, 241, 228, 0.74);
+}
+
+.photo-hero.butterfly-hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo-hero.butterfly-hero .btn {
+  border-color: #E9C77E;
+  color: #E9C77E;
+}
+
+.photo-hero.butterfly-hero .btn:hover {
+  background: #E9C77E;
+  color: #1D2A20;
+}
+
+.photo-hero.butterfly-hero .btn.solid {
+  background: #E9C77E;
+  border-color: #E9C77E;
+  color: #1D2A20;
+}
+
+.photo-hero.butterfly-hero .btn.solid:hover {
+  background: #FBF9F1;
+  border-color: #FBF9F1;
+}
+
+@media (max-width: 760px) {
+  .photo-hero.butterfly-hero {
+    min-height: 82vh;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05) 0%,
+        rgba(0, 0, 0, 0.72) 100%
+      ),
+      url("../img/hero.jpeg");
+    background-position: 34% center;
+  }
+
+  .photo-hero.butterfly-hero .hero-inner {
+    align-items: flex-start;
+    padding: 0 28px 52px;
+  }
+
+  .photo-hero.butterfly-hero h1 {
+    font-size: clamp(2.45rem, 12vw, 4.2rem);
+    max-width: 12ch;
+  }
+
+  header.site.on-photo .navlinks {
+    background: rgba(29, 42, 32, 0.96);
+    border-bottom-color: rgba(245, 241, 228, 0.18);
+  }
+
+  header.site.on-photo .navlinks a {
+    border-bottom-color: rgba(245, 241, 228, 0.18);
+  }
+}
+
+
+/* --- dark editorial refinements --- */
+body::selection{
+  background: rgba(230, 198, 106, 0.32);
+  color: var(--ink);
+}
+
+section:not(.photo-hero){
+  background: var(--paper);
+}
+
+.specimen-card,
+.field-panel,
+.person-plate,
+.contact-block,
+.thumb{
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+  box-shadow: 0 20px 60px rgba(0,0,0,.20);
+}
+
+.thumb .frame{
+  background: rgba(255,255,255,.018);
+}
+
+.btn{
+  border-color: rgba(244,241,232,.72);
+  color: var(--ink);
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #090B0C;
+}
+
+.btn.solid{
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #090B0C;
+}
+
+.label-tag{
+  color: var(--gold);
+}
+.label-tag::before{
+  background: var(--gold);
+}
+
+.navlinks a:hover,
+.navlinks a.active{
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+footer.site .brand,
+footer.site p,
+footer.site .muted{
+  color: var(--ink-soft);
+}
+
+footer.site a{
+  color: var(--gold);
+}
+
+/* make the first content block feel less like a beige card below the photo */
+.thumb-strip{
+  padding-top: 64px;
+}
+
+.divider{
+  opacity: .85;
+}
