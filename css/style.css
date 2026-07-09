@@ -564,3 +564,35 @@ footer.site a{
 .thumb:hover .thumb-img {
   transform: scale(1.04);
 }
+
+.supporters{
+    padding:50px 0 30px;
+    border-top:1px solid var(--paper-line);
+}
+
+.support-title{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:.9rem;
+    margin-bottom:22px;
+}
+
+.support-logos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+.support-logos img{
+    height:58px;
+    width:auto;
+    opacity:.9;
+    transition:opacity .2s ease,
+               transform .2s ease;
+}
+
+.support-logos img:hover{
+    opacity:1;
+    transform:translateY(-2px);
+}
