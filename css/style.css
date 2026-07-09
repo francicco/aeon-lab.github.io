@@ -18,15 +18,15 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root{
-  --paper:#FAF7EF;
-  --paper-line:#E2DBC6;
-  --panel:#F1EAD8;
-  --panel-line:#D9CFB2;
-  --ink:#1D2A20;
-  --ink-soft:#5C6558;
-  --rust:#A6532B;
-  --rust-deep:#7E3E20;
-  --gold:#93711F;
+  --paper:#111315;
+  --paper-line:#2A2E31;
+  --panel:#181B1E;
+  --panel-line:#34393E;
+  --ink:#F5F5F2;
+  --ink-soft:#B5BBB9;
+  --rust:#D56B3D;
+  --rust-deep:#F08A5D;
+  --gold:#D8B15A;
   --max:1080px;
 }
 
