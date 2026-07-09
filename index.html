@@ -3,51 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AEoN Lab — Evolutionary Genomics &amp; Innovation</title>
+<title>Cicconardi Lab — Evolutionary Genomics &amp; Innovation</title>
 <meta name="description" content="The Cicconardi Lab studies comparative genomics and phenotypic innovation in tropical insects — Heliconius butterflies, riodinid ants, and stingless bees.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site">
-  <nav class="wrap nav">
-    <a class="brand" href="index.html">AEoN Lab
-      <small>Evolutionary Genomics &amp; Innovation</small>
-    </a>
-    <button class="navtoggle" aria-label="Toggle menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
-    <ul class="navlinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!--
+  HERO PHOTO: to add your own photograph, set a background-image on .photo-hero
+  below (inline style already provided as a placeholder attribute) and remove
+  the "no-photo" class. Recommended: a wide, landscape-orientation shot at
+  least 1800px wide — insectary, fieldwork, or a specimen photograph all work.
+  Example:
+    <section class="photo-hero" style="background-image:url('img/hero.jpg');">
+-->
+<section class="photo-hero no-photo">
+  <header class="site on-photo">
+    <nav class="wrap nav">
+      <a class="brand" href="index.html">Cicconardi Lab
+        <small>Evolutionary Genomics &amp; Innovation</small>
+      </a>
+      <button class="navtoggle" aria-label="Toggle menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+      <ul class="navlinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="label-tag">USP São Paulo · InTheGra Fellowship</span>
-      <h1>How does the genome build a new way of living?</h1>
-      <p class="lede">The Adaptive Evolution of Novelty Lab, let by Dr. Francesco Cicconardi, studies the genomic basis of phenotypic innovation in tropical insects — pollen-feeding butterflies, ant-mimicking caterpillars, and social bees that live inside other species' nests. We work across comparative genomics, EcoEvoDevo, and single-cell transcriptomics.</p>
-      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:28px;">
-        <a class="btn solid" href="research.html">Explore the research</a>
-        <a class="btn" href="contact.html">Join the lab</a>
-      </div>
+  <div class="wrap hero-inner">
+    <span class="hero-note">Photo pending — see README</span>
+    <h1>Evolutionary Genomics &amp; Innovation Lab</h1>
+    <p class="tagline">Comparative genomics, EcoEvoDevo, and single-cell transcriptomics — reading the genomic basis of phenotypic innovation in tropical insects.</p>
+    <div class="meta-lines">
+      USP São Paulo — InTheGra Fellowship, FAPESP<br>
+      School of Biological Sciences, University of Bristol<br>
+      <a href="mailto:f.cicconardi@bristol.ac.uk">f.cicconardi@bristol.ac.uk</a>
     </div>
+    <a class="btn" href="contact.html">If you want to join us, get in touch</a>
+  </div>
+</section>
 
-    <div class="field-panel">
-      <div class="band"></div>
-      <div class="body">
-        <div class="label-tag">Current Specimen</div>
-        <h3>Heliconius spp.</h3>
-        <dl>
-          <dt>Focus</dt><dd>Pollen-feeding, genome evolution</dd>
-          <dt>Clade</dt><dd>Heliconiini</dd>
-          <dt>Sites</dt><dd>USP São Paulo · Bristol</dd>
-          <dt>Host plants</dt><dd><em>Passiflora</em> spp., insectary-reared</dd>
-        </dl>
+<section class="thumb-strip">
+  <div class="wrap">
+    <div class="thumb-row">
+      <div class="thumb">
+        <div class="frame">Photo pending<br>— Heliconius —</div>
+        <div class="cap"><b>Heliconius</b>Pollen-feeding &amp; genome evolution</div>
+      </div>
+      <div class="thumb">
+        <div class="frame">Photo pending<br>— Riodinidae —</div>
+        <div class="cap"><b>Riodinids</b>Ant-mimicry &amp; signalling</div>
+      </div>
+      <div class="thumb">
+        <div class="frame">Photo pending<br>— Meliponini —</div>
+        <div class="cap"><b>Stingless bees</b>Cleptobiosis &amp; caste evolution</div>
+      </div>
+      <div class="thumb">
+        <div class="frame">Photo pending<br>— Insectary —</div>
+        <div class="cap"><b>USP insectary</b><em>Passiflora</em>-reared colonies</div>
       </div>
     </div>
   </div>
@@ -78,26 +95,6 @@
   </div>
   <div class="wrap" style="margin-top:34px;">
     <a class="btn" href="research.html">Read about the full research program →</a>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="wrap grid-2" style="align-items:center;">
-    <div>
-      <span class="label-tag">Approach</span>
-      <h2>Comparative genomics, built for non-model species</h2>
-      <p class="muted">Most of what we study has no reference genome, no annotated pathways, and no established husbandry protocol. We build the genomic and computational infrastructure — from long-read assembly to ortholog rescue across dozens of species — needed to ask evolutionary questions in systems that were previously out of reach.</p>
-      <p class="muted">Alongside comparative genomics, the lab runs a live insectary rearing <em>Heliconius</em> on <em>Passiflora</em> host plants, connecting genomic hypotheses to real developmental and behavioural biology.</p>
-    </div>
-    <div class="specimen-card">
-      <div class="label-tag">Lab Notebook — Field Note 003</div>
-      <h3 style="margin-bottom:.3em;">Insectary, USP campus</h3>
-      <p style="margin-bottom:0;">Rearing colonies established on <em>Passiflora suberosa</em>, <em>P. misera</em>, and <em>P. edulis</em>, sourced with collaborators at UFRGS. Live colonies link comparative genomic findings to observable phenotype — diet, development, and behaviour — inside the same research program.</p>
-      <div class="specimen-row">
-        <span><b>Host plants</b> 3 species</span>
-        <span><b>Locality</b> São Paulo, BR</span>
-      </div>
-    </div>
   </div>
 </section>
 
