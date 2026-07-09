@@ -373,10 +373,9 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
       rgba(0, 0, 0, 0.25) 42%,
       rgba(0, 0, 0, 0.84) 100%
     ),
-    url("../img/hero.jpeg");
+    
+  background-position: center;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .photo-hero.butterfly-hero .hero-inner {
