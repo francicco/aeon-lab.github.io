@@ -28,6 +28,23 @@ If you buy a domain (e.g. from Namecheap):
 
 Every page is a plain HTML file — open any of them in a text editor and edit the text directly; no templating system to worry about. All shared styling lives in `css/style.css`. To add a new publication, copy one `.pub` block in `publications.html` and edit the text.
 
+## Adding your homepage photo
+
+The homepage (`index.html`) now uses a full-bleed photo hero, styled after shmontgomery.co.uk. Right now it shows a placeholder pattern with a small "Photo pending" tag — to add a real photo:
+
+1. Put your image in the `img/` folder, e.g. `img/hero.jpg` (a wide, landscape shot, ideally 1800px+ wide — insectary, fieldwork, or a specimen shot all work).
+2. In `index.html`, find this line near the top:
+   ```html
+   <section class="photo-hero no-photo">
+   ```
+   and change it to:
+   ```html
+   <section class="photo-hero" style="background-image:url('img/hero.jpg');">
+   ```
+3. Remove or ignore the `<span class="hero-note">Photo pending...</span>` line once you're happy with it (it's just a visible reminder while the photo is missing).
+
+The four small thumbnail tiles under the hero (Heliconius, Riodinids, stingless bees, insectary) work the same way — each has a `.frame` div with placeholder text; swap it for `<img src="img/your-photo.jpg" alt="...">` once you have real photos for each.
+
 ## What's real vs. placeholder
 
 - Publications are real, pulled from Google Scholar / ORCID / journal records (DOIs link out and verified as of July 2026).
