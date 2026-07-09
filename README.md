@@ -4,23 +4,23 @@ Static site: 5 pages (Home, Research, Publications, People, Contact), one shared
 
 ## Deploy to GitHub Pages (free hosting)
 
-1. Create a new GitHub repo, e.g. `cicconardi-lab`.
+1. Create a new GitHub repo, e.g. `AEoN-lab`.
 2. Upload all files in this folder (`index.html`, `research.html`, `publications.html`, `people.html`, `contact.html`, the `css/` folder) to the repo root — either via the GitHub web UI ("Add file → Upload files") or:
    ```
    git init
    git add .
    git commit -m "Initial site"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/cicconardi-lab.git
+   git remote add origin https://github.com/<your-username>/AEoN-lab.git
    git push -u origin main
    ```
 3. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main / (root)**. Save.
-4. Your site goes live at `https://<your-username>.github.io/cicconardi-lab/` within a minute or two.
+4. Your site goes live at `https://<your-username>.github.io/AEoN-lab/` within a minute or two.
 
 ## Custom domain (optional)
 
 If you buy a domain (e.g. from Namecheap):
-1. In the repo, add a file named `CNAME` containing just your domain, e.g. `cicconardilab.com`.
+1. In the repo, add a file named `CNAME` containing just your domain, e.g. `AEoNlab.com`.
 2. At your domain registrar, add a `CNAME` record pointing to `<your-username>.github.io`.
 3. Back in GitHub Pages settings, enter the custom domain and enable "Enforce HTTPS."
 
