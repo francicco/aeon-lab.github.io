@@ -47,6 +47,24 @@ p{margin:0 0 1.15em; color:var(--ink);}
 
 .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
 
+.thumb-img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    border-bottom:1px solid var(--panel-line);
+
+    transition:transform .45s ease;
+}
+
+.thumb{
+    overflow:hidden;
+}
+
+.thumb:hover .thumb-img{
+    transform:scale(1.06);
+}
+
 /* --- eyebrow / specimen-label device --------------------- */
 .label-tag{
   font-family:'IBM Plex Mono', monospace;
