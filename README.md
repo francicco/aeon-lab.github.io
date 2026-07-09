@@ -1,4 +1,4 @@
-# Cicconardi Lab website
+# AEoN Lab website
 
 Static site: 5 pages (Home, Research, Publications, People, Contact), one shared stylesheet, no build step, no dependencies.
 
