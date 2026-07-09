@@ -39,7 +39,6 @@ body{
   font-family:'DM Sans', sans-serif;
   font-size:17px;
   line-height:1.65;
-  -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block;}
 a{color:inherit;}
@@ -99,9 +98,9 @@ p{margin:0 0 1.15em; color:var(--ink);}
 /* --- nav -------------------------------------------------- */
 header.site{
   position:sticky; top:0; z-index:40;
-  background:rgba(250,247,239,.94);
+  background:rgba(17,19,21,.92);
   backdrop-filter:blur(6px);
-  border-bottom:1px solid var(--paper-line);
+  border-bottom:1px solid #26292C;
 }
 .nav{
   display:flex; align-items:center; justify-content:space-between;
