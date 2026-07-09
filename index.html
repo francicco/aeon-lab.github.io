@@ -175,5 +175,28 @@
   </div>
 </footer>
 
+<script>
+const heroes = [
+    "img/hero.jpeg",
+    "img/lestrimelitta.jpg",
+    "img/heliconius.jpg"
+];
+
+const hero = document.querySelector(".photo-hero");
+
+const randomImage =
+    heroes[Math.floor(Math.random()*heroes.length)];
+
+hero.style.backgroundImage =
+`
+linear-gradient(
+to right,
+rgba(0,0,0,.18) 0%,
+rgba(0,0,0,.25) 42%,
+rgba(0,0,0,.84) 100%
+),
+url('${randomImage}')
+`;
+</script>
 </body>
 </html>
