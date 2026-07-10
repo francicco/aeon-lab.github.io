@@ -446,6 +446,13 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
   width: min(100%, 540px);
 }
 
+@media (max-width: 760px) {
+  .photo-hero.butterfly-hero .hero-inner {
+    align-items: flex-start;
+    padding: 0 28px 52px;
+  }
+}
+
 .photo-hero.butterfly-hero h1 {
   color: #FBF9F1;
   font-size: clamp(2.8rem, 6.3vw, 5.8rem);
