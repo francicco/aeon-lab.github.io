@@ -418,7 +418,7 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
 
 .photo-hero.butterfly-hero .hero-inner {
   width: 100%;
-  max-width: var(--max);
+  max-width: 1500px;
   margin: 0 auto;
 
 
