@@ -425,7 +425,7 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
   right: 0;
   bottom: 0;
 
-  height: 240px;
+  height: 200px;
 
   background: linear-gradient(
     to bottom,
@@ -467,7 +467,6 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
    
   width: 100%;
   max-width: 1500px;
-  max-high: 500px;
   margin: 0 auto;
 
 
