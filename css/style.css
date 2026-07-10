@@ -162,6 +162,29 @@ section{padding:80px 0;}
 .section-tight{padding:90px 0;}
 .grid-2{display:grid; grid-template-columns:1.15fr .85fr; gap:64px;}
 .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.opportunities-grid .research-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.opportunities-grid .research-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 860px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width:860px){
   .grid-2{grid-template-columns:1fr;}
   .grid-3{grid-template-columns:1fr;}
