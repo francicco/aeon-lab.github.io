@@ -463,7 +463,7 @@ header.site.on-photo .navtoggle{color:#F5F1E4;}
 
 .photo-hero.butterfly-hero .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 1;
    
   width: 100%;
   max-width: 1500px;
