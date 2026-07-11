@@ -876,6 +876,7 @@ footer.site a{
     overflow: visible;
   }
 
+  /* Fixed top navigation bar */
   .photo-hero.butterfly-hero header.site.on-photo {
     position: fixed !important;
     top: 0;
@@ -883,13 +884,14 @@ footer.site a{
     right: 0;
     z-index: 1000 !important;
 
-    background: rgba(9,11,12,0.55) !important;
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    background-color: rgba(9, 11, 12, 0.62) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-}
+    backdrop-filter: blur(22px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(120%) !important;
+  }
 
+  /* Opened dropdown menu */
   .photo-hero.butterfly-hero header.site.on-photo .navlinks {
     position: fixed !important;
     top: 72px !important;
@@ -903,12 +905,12 @@ footer.site a{
     overflow-y: auto;
 
     padding: 8px 32px 20px;
-    background: #090b0c !important;
-    opacity: 1 !important;
+
+    background-color: rgba(9, 11, 12, 0.72) !important;
     border-bottom: 1px solid var(--paper-line);
 
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    backdrop-filter: blur(22px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(120%) !important;
 
     transform: translateY(-140%);
     transition: transform 0.25s ease;
@@ -922,7 +924,7 @@ footer.site a{
     display: block;
     padding: 15px 0;
     color: var(--ink);
-    border-bottom: 1px solid var(--paper-line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .photo-hero.butterfly-hero .hero-inner {
