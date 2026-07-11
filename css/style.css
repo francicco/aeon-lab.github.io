@@ -181,7 +181,6 @@ section{padding:0px 0;}
 }
 
 /* --- research system images -------------------------------- */
-
 .research-system {
   margin-bottom: 36px;
 }
@@ -236,6 +235,113 @@ section{padding:0px 0;}
 .divider{height:1px; background:var(--paper-line); margin:0 0 44px;}
 
 .muted{color:var(--ink-soft);}
+
+/* ===========================================================
+   Additional research directions
+   =========================================================== */
+.side-projects-section {
+  padding: 55px 0;
+}
+.side-projects-heading {
+  max-width: 24ch;
+  margin-bottom: 16px;
+}
+.side-projects-intro {
+  max-width: 68ch;
+  margin-bottom: 34px;
+}
+.side-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+.side-project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.018)
+    );
+  border: 1px solid var(--panel-line);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+.side-project-image-wrap {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--panel-line);
+}
+.side-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+.side-project-card:hover .side-project-image {
+  transform: scale(1.025);
+}
+.side-project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px 28px 24px;
+}
+.side-project-content .tag {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.side-project-content h3 {
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+}
+.side-project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--panel-line);
+
+  color: var(--ink-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.side-project-meta b {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 820px) {
+  .side-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-projects-section {
+    padding: 42px 0;
+  }
+}
+@media (max-width: 600px) {
+  .side-project-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+  .side-project-content {
+    padding: 24px 22px 22px;
+  }
+}
+
 
 /* --- hero ------------------------------------------------ */
 .hero{padding:70px 0 20px;}
