@@ -497,6 +497,13 @@ header.site.on-photo .brand small{color:#E9C77E;}
 header.site.on-photo .navlinks a:hover,
 header.site.on-photo .navlinks a.active{color:#E9C77E; border-color:#E9C77E;}
 header.site.on-photo .navtoggle{color:#F5F1E4;}
+header.site.on-photo .navlinks {
+    background: rgba(9, 11, 12, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
 
 /* thumbnail strip beneath the hero */
 .thumb-strip{padding:52px 0 60px;}
