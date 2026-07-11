@@ -887,8 +887,8 @@ footer.site a{
     background-color: rgba(9, 11, 12, 0.62) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    backdrop-filter: blur(16px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+    backdrop-filter: blur(1px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(1px) saturate(120%) !important;
   }
 
   /* Opened dropdown menu */
@@ -909,8 +909,8 @@ footer.site a{
     background-color: rgba(9, 11, 12, 0.72) !important;
     border-bottom: 1px solid var(--paper-line);
 
-    backdrop-filter: blur(22px) saturate(120%) !important;
-    -webkit-backdrop-filter: blur(22px) saturate(120%) !important;
+    backdrop-filter: blur(16px) saturate(120%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
 
     transform: translateY(-140%);
     transition: transform 0.25s ease;
