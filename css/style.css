@@ -865,3 +865,45 @@ footer.site a{
     opacity:1;
     transform:translateY(-2px);
 }
+
+
+/* ===========================================================
+   Mobile homepage navigation
+   Keep the header visible while scrolling
+   =========================================================== */
+
+@media (max-width: 760px) {
+
+  header.site.on-photo {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+
+    background: rgba(9, 11, 12, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  header.site.on-photo .navlinks {
+    position: fixed;
+    inset: 72px 0 auto 0;
+    z-index: 999;
+
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+
+    background: #090B0C;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  header.site.on-photo .navlinks a {
+    padding: 16px 0;
+    color: var(--ink);
+    border-bottom-color: var(--paper-line);
+  }
+}
