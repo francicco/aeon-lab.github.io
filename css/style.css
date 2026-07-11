@@ -492,7 +492,7 @@ header.site.on-photo{
   position:absolute; top:0; left:0; right:0;
 }
 header.site.on-photo .brand,
-/*header.site.on-photo .navlinks a{color:#F5F1E4;} */
+header.site.on-photo .navlinks a{color:#F5F1E4;}
 header.site.on-photo .brand small{color:#E9C77E;}
 header.site.on-photo .navlinks a:hover,
 header.site.on-photo .navlinks a.active{color:#E9C77E; border-color:#E9C77E;}
@@ -735,11 +735,13 @@ header.site.on-photo .navlinks {
     max-width: 12ch;
   }
 
+/*
   header.site.on-photo .navlinks {
     background: rgba(29, 42, 32, 0.96);
     border-bottom-color: rgba(245, 241, 228, 0.18);
   }
-
+*/
+   
   header.site.on-photo .navlinks a {
     border-bottom-color: rgba(245, 241, 228, 0.18);
   }
