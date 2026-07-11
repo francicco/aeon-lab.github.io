@@ -876,52 +876,44 @@ footer.site a{
 
 @media (max-width: 760px) {
 
-  .photo-hero.butterfly-hero header.site.on-photo {
+  .photo-hero.butterfly-hero > header.site.on-photo {
     position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+
+    z-index: 9999 !important;
 
     background: #090B0C !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .photo-hero.butterfly-hero header.site.on-photo .navlinks {
-    position: fixed !important;
-    top: 72px !important;
+  .photo-hero.butterfly-hero > header.site.on-photo .navlinks {
+    position: absolute !important;
+    top: 100% !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: auto !important;
-    z-index: 999;
+
+    z-index: 10000 !important;
 
     width: 100%;
-    max-height: calc(100vh - 72px);
-    overflow-y: auto;
-
-    padding: 8px 32px 20px;
+    padding: 10px 32px 22px;
 
     background: #090B0C !important;
-    border-bottom: 1px solid var(--paper-line);
+    opacity: 1 !important;
 
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 
     transform: translateY(-140%);
     transition: transform 0.25s ease;
   }
 
-  .photo-hero.butterfly-hero header.site.on-photo .navlinks.open {
+  .photo-hero.butterfly-hero > header.site.on-photo .navlinks.open {
     transform: translateY(0);
   }
 
-  .photo-hero.butterfly-hero header.site.on-photo .navlinks a {
-    display: block;
-    padding: 15px 0;
-    color: var(--ink);
-    border-bottom: 1px solid var(--paper-line);
+  .photo-hero.butterfly-hero .hero-inner {
+    z-index: 2;
   }
 }
