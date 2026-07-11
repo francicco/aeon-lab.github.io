@@ -180,6 +180,49 @@ section{padding:80px 0;}
   align-self: flex-start;
 }
 
+/* --- research system images -------------------------------- */
+
+.research-system {
+  margin-bottom: 36px;
+}
+
+.research-system-img {
+  width: 100%;
+  height: clamp(260px, 42vw, 520px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 1px solid var(--panel-line);
+  border-bottom: 0;
+}
+
+.research-system .specimen-card {
+  border-top: 0;
+}
+
+/* Optional subtle zoom */
+.research-system {
+  overflow: hidden;
+}
+
+.research-system-img {
+  transition: transform 0.6s ease;
+}
+
+.research-system:hover .research-system-img {
+  transform: scale(1.015);
+}
+
+@media (max-width: 760px) {
+  .research-system-img {
+    height: 260px;
+  }
+
+  .research-system .specimen-card {
+    padding: 26px 22px;
+  }
+}
+
 @media (max-width: 860px) {
   .opportunities-grid {
     grid-template-columns: 1fr;
