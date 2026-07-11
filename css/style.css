@@ -883,11 +883,11 @@ footer.site a{
     right: 0;
     z-index: 1000 !important;
 
-    background: rgba(9,11,12,0.72) !important;
+    background: rgba(9,11,12,0.55) !important;
     border-bottom: 1px solid rgba(255,255,255,.08);
 
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 }
 
   .photo-hero.butterfly-hero header.site.on-photo .navlinks {
