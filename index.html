@@ -3,23 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AEON Lab — Adaptive Evolution of Novelty</title>
-<meta name="description" content="The AEON Lab (Adaptive Evolution of Novelty) studies comparative genomics and phenotypic innovation in tropical insects — Heliconius butterflies, riodinid ants, and stingless bees.">
+<title>AEoN Lab — Adaptive Evolution of Novelty Lab</title>
+<meta name="description" content="The Adaptive Evolution of Novelty Lab (AEON Lab), led by Dr. Francesco Cicconardi, studies evolutionary genomics, comparative genomics, and phenotypic innovation in tropical insects.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!--
-  HERO PHOTO: to add your own photograph, set a background-image on .photo-hero
-  below and remove the "no-photo" class. Recommended: a wide, landscape-orientation
-  shot at least 1800px wide — insectary, fieldwork, or a specimen photograph all work.
-  Example:
-    <section class="photo-hero" style="background-image:url('img/hero.jpg');">
--->
-<section class="photo-hero no-photo">
+<section class="photo-hero butterfly-hero">
   <header class="site on-photo">
     <nav class="wrap nav">
-      <a class="brand" href="index.html">AEON Lab
+      <a class="brand" href="index.html">AEoN Lab
         <small>Adaptive Evolution of Novelty</small>
       </a>
       <button class="navtoggle" aria-label="Toggle menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
@@ -34,56 +27,102 @@
   </header>
 
   <div class="wrap hero-inner">
-    <span class="hero-note">Photo pending — see README</span>
     <h1>Adaptive Evolution of Novelty Lab</h1>
-    <p class="tagline">Comparative genomics, EcoEvoDevo, and single-cell transcriptomics — reading the genomic basis of phenotypic innovation in tropical insects.</p>
+    <p class="tagline">Evolutionary genomics of biodiversity, adaptation, and phenotypic innovation in tropical insects.</p>
     <div class="meta-lines">
-      USP São Paulo — InTheGra Fellowship, FAPESP<br>
-      School of Biological Sciences, University of Bristol<br>
-      <a href="mailto:f.cicconardi@bristol.ac.uk">f.cicconardi@bristol.ac.uk</a>
+      Department of Genetics and Evolutionary Biology<br>
+      Institute of Biosciences, University of São Paulo<br>
+      <a href="mailto:fcicconardi@usp.br">fcicconardi@usp.br</a>
     </div>
-    <a class="btn" href="contact.html">If you want to join us, get in touch</a>
+    <div class="hero-actions">
+      <a class="btn solid" href="research.html">Explore our research</a>
+      <a class="btn" href="contact.html">Join the lab</a>
+    </div>
+  </div>
+</section>
+
+<section class="thumb-strip">
+  <div class="wrap">
+    <div class="thumb-row">
+
+      <!-- Heliconius -->
+      <a class="thumb-link" href="research.html#heliconius">
+        <div class="thumb">
+          <img class="thumb-img"
+               src="img/heliconius.jpg"
+               alt="Heliconius butterflies">
+      </a>
+        <div class="cap">
+          <b><i>Heliconius</i></b>
+          Pollen-feeding &amp; genome evolution
+        </div>
+      </div>
+      
+      
+      <!-- Riodinids -->
+      <a class="thumb-link" href="research.html#riodinids">
+      <div class="thumb">
+        <img class="thumb-img"
+             src="img/adelotypa-annulifera.webp"
+             alt="Adelotypa annulifera">
+      </a>
+        <div class="cap">
+          <b>Riodinids</b>
+          Ant-mimicry &amp; signalling
+        </div>
+      </div>
+
+      <!-- Stingless bees -->
+      <a class="thumb-link" href="research.html#meliponini">
+      <div class="thumb">
+        <img class="thumb-img"
+             src="img/lestrimelitta.jpg"
+             alt="Lestrimelitta limao">
+      </a>
+        <div class="cap">
+          <b>Stingless bees</b>
+          Cleptobiosis &amp; caste evolution
+        </div>
+      </div>
+
+      <!-- Convergent evolution --> 
+      <a class="thumb-link" href="research.html#side-projects">
+        <div class="thumb">
+          <img class="thumb-img"
+               src="img/honeypot.webp"
+               alt="Myrmecocystus mimicus">
+      </a>
+        <div class="cap">
+          <b>Side-projects: Convergent evolution</b>
+          Honeypot ants and Antarctic springtails
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section class="section-tight">
   <div class="wrap">
     <div class="divider"></div>
-    <span class="label-tag">Research Systems</span>
-    <h2 style="max-width:24ch;">Four natural experiments in phenotypic novelty</h2>
+    <span class="label-tag">Research Themes</span>
+    <h2 style="max-width:20ch;">Three natural experiments in adaptive evolution of innovation</h2>
   </div>
-  <div class="wrap grid-4" style="margin-top:36px;">
+  <div class="wrap grid-3" style="margin-top:36px;">
     <div class="research-card">
-      <div class="photo-frame">Photo pending<br>— Heliconius —</div>
-      <div class="card-body">
-        <span class="tag">System 01</span>
-        <h3>Pollen-feeding</h3>
-        <p class="muted" style="margin-bottom:0;">The only butterflies known to digest pollen for amino acids — a dietary innovation layered onto a genome shaped by adaptive radiation.</p>
-      </div>
+      <span class="tag">System 01</span>
+      <h3>Heliconius pollen-feeding</h3>
+      <p class="muted">The only butterflies known to digest pollen for amino acids — a dietary innovation layered onto a genome shaped by adaptive radiation and mimicry.</p>
     </div>
     <div class="research-card">
-      <div class="photo-frame">Photo pending<br>— Riodinidae —</div>
-      <div class="card-body">
-        <span class="tag">System 02</span>
-        <h3>Riodinid–ant associations</h3>
-        <p class="muted" style="margin-bottom:0;">Metalmark caterpillars that chemically and acoustically mimic ants — convergent signalling across kingdoms.</p>
-      </div>
+      <span class="tag">System 02</span>
+      <h3>Riodinid–ant associations</h3>
+      <p class="muted">Metalmark caterpillars that chemically and acoustically mimic ants to secure protection — a case study in convergent signalling across kingdoms.</p>
     </div>
     <div class="research-card">
-      <div class="photo-frame">Photo pending<br>— Meliponini —</div>
-      <div class="card-body">
-        <span class="tag">System 03</span>
-        <h3>Stingless bee cleptobiosis</h3>
-        <p class="muted" style="margin-bottom:0;">Bees that live by raiding other bees' nests — social parasitism as a lens on caste and genome evolution.</p>
-      </div>
-    </div>
-    <div class="research-card">
-      <div class="photo-frame">Photo pending<br>— Insectary —</div>
-      <div class="card-body">
-        <span class="tag">Infrastructure</span>
-        <h3>USP insectary</h3>
-        <p class="muted" style="margin-bottom:0;">A live rearing colony on <em>Passiflora</em> host plants, linking genomic hypotheses to observable phenotype and behaviour.</p>
-      </div>
+      <span class="tag">System 03</span>
+      <h3>Stingless bee cleptobiosis</h3>
+      <p class="muted">Bees that live by raiding the nests of other bees — social parasitism as a lens on caste, behaviour, and genome evolution.</p>
     </div>
   </div>
   <div class="wrap" style="margin-top:34px;">
@@ -109,11 +148,85 @@
   </div>
 </section>
 
+<section class="section-tight">
+  <div class="wrap">
+
+    <div class="divider"></div>
+
+    <span class="label-tag">Opportunities</span>
+
+    <h2 style="max-width:20ch;">
+      Join the AEoN Lab
+    </h2>
+
+    <p class="muted" style="max-width:60ch;margin-bottom:40px;">
+      We are currently recruiting highly motivated researchers to join the laboratory at the
+      University of São Paulo through FAPESP Technical Training Fellowships.
+    </p>
+
+    <div class="opportunities-grid">
+
+      <div class="research-card">
+        <span class="tag">TT-3 Fellowship</span>
+
+        <h3>Molecular Biology & Genomics</h3>
+
+        <p class="muted">
+          Laboratory-based research, including DNA/RNA extraction, sequencing,
+          insect rearing, dissections and support for comparative genomics
+          and Evo-Devo projects.
+        </p>
+
+        <a class="btn"
+           href="https://fapesp.br/oportunidades/interacoes-bioticas-como-motor-da-inovacao-fenotipica:-integrando-genomica-comparativa-e-eco-evo-devo/9542/"
+           target="_blank">
+           View position →
+        </a>
+      </div>
+
+      <div class="research-card">
+        <span class="tag">TT-4 Fellowship</span>
+
+        <h3>Bioinformatics & Computational Genomics</h3>
+
+        <p class="muted">
+          Genome assembly, comparative genomics, Linux servers,
+          workflow development, large-scale sequencing data analysis,
+          and computational biology.
+        </p>
+
+        <a class="btn"
+           href="https://fapesp.br/oportunidades/interacoes-bioticas-como-motor-da-inovacao-fenotipica:-integrando-genomica-comparativa-e-eco-evo-devo/9543/"
+           target="_blank">
+           View position →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  
+<section class="supporters">
+  <div class="wrap">
+
+    <p class="support-title">Supported by</p>
+
+    <div class="support-logos">
+      <a href="https://fapesp.br/en" target="_blank" rel="noopener">
+        <img src="img/fapesp-white.svg"
+             alt="FAPESP - São Paulo Research Foundation">
+      </a>
+    </div>
+
+  </div>
+</section>
+  
 <footer class="site">
   <div class="wrap foot-grid">
     <div>
-      <div class="brand" style="margin-bottom:8px;">AEON Lab</div>
-      <p class="muted" style="max-width:38ch;">Adaptive Evolution of Novelty Lab — USP São Paulo (InTheGra Fellowship, FAPESP) · University of Bristol, School of Biological Sciences.</p>
+      <div class="brand" style="margin-bottom:8px;">AEoN-Lab</div>
+      <p class="muted" style="max-width:38ch;">Adaptive Evolution of Novelty Lab — Department of Genetics and Evolutionary Biology, Institute of Biosciences, University of São Paulo.</p>
     </div>
     <div>
       <div class="label-tag">Navigate</div>
@@ -126,5 +239,29 @@
   </div>
 </footer>
 
+<script>
+const heroes = [
+    "img/hero.jpeg",
+    "img/lestrimelitta.jpg",
+    "img/DSCF0295-Enhanced-NR.jpg",
+    "img/DSCF9661-Enhanced-NR.jpg"
+];
+
+const hero = document.querySelector(".photo-hero");
+
+const randomImage =
+    heroes[Math.floor(Math.random()*heroes.length)];
+
+hero.style.backgroundImage =
+`
+linear-gradient(
+to right,
+rgba(0,0,0,.18) 0%,
+rgba(0,0,0,.25) 42%,
+rgba(0,0,0,.84) 100%
+),
+url('${randomImage}')
+`;
+</script>
 </body>
 </html>
