@@ -870,6 +870,7 @@ header.site.on-photo .navlinks a.active {
   font-style: italic;
 }
 
+/*
 .pub a.doi {
   color: var(--rust);
   font-family: 'IBM Plex Mono', monospace;
@@ -878,6 +879,24 @@ header.site.on-photo .navlinks a.active {
 }
 
 .pub a.doi:hover {
+  text-decoration: underline;
+}
+*/
+
+a.doi {
+  display: inline-block;
+  margin-top: 8px;
+
+  color: var(--rust);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  text-decoration: none;
+
+  transition: color .2s ease;
+}
+
+a.doi:hover {
+  color: var(--gold);
   text-decoration: underline;
 }
 
